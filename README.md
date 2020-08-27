@@ -12,14 +12,17 @@ pip3 install -r requirements.txt
 
 ## 2. Usage
 ```
--h, --help        show this help message and exit
--u URL           URL target
--w WORDLIST  Customize wordlist (default wordlist.txt)
--t THREADS    Set thread (default 20)
--v                  show verbose
+optional arguments:
+  -h, --help   show this help message and exit
+  -u URL       URL target
+  -U URLFILE   URL list target
+  -w WORDLIST  Customize wordlist (default wordlist.txt) or a single path
+  -t THREADS   Set thread (default 20)
+  -v           show verbose
 ```
 
-```
-python3 dirscan.py -u http://127.0.0.1:8081
-python3 dirscan.py -u http://127.0.0.1:8081 -w dict.txt -t 30 -v
-```
+
+- 默认扫描：python3 dirscan.py -u http://127.0.0.1:8081
+- 显示详细：python3 dirscan.py -u http://127.0.0.1:8081 -v
+- 指定字典：python3 dirscan.py -u http://127.0.0.1:8081 -w wordlist.txt -t 30 -v
+- 文件扫描：python3 dirscan.py -U url.txt -w /admin -t 20 -v
