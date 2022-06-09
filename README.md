@@ -16,8 +16,9 @@ optional arguments:
   -h, --help   show this help message and exit
   -u URL       URL target
   -U URLFILE   URL list target
-  -w WORDLIST  Customize wordlist (default wordlist.txt) or a single path
-  -t THREADS   Set thread (default 20)
+  -w WORDLIST  Customize wordlist (default wordlist.txt)
+  -p PATH      Request path (default '/')
+  -t THREADS   Set thread (default 25)
   -v           show verbose
 ```
 
@@ -25,4 +26,15 @@ optional arguments:
 - 默认扫描：python3 dirscan.py -u http://127.0.0.1:8081
 - 显示详细：python3 dirscan.py -u http://127.0.0.1:8081 -v
 - 指定字典：python3 dirscan.py -u http://127.0.0.1:8081 -w wordlist.txt -t 30 -v
-- 文件扫描：python3 dirscan.py -U url.txt -w /admin -t 20 -v
+- url文件扫描：python3 dirscan.py -U url.txt -p /admin -v (配合-p参数指定路径)
+
+## 3. ChangeLog
+
+### v0.3 2020
+- 
+### v0.2 20200827 
+- Fix some bugs
+- Add URL file scan
+
+### v0.1 20200725 
+- Dirscan
